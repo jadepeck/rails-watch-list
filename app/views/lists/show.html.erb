@@ -1,0 +1,10 @@
+<div class="container mt-3">
+  <% @bookmarks.each do |bookmark| %>
+    <h1><%= bookmark.movie.title %></h1>
+  <% end %>
+  <div class="card p-3 bg-light">
+    <%= link_to "Add Bookmark", new_list_bookmark_path(@list) %>
+    <%= link_to "Back to Lists", lists_path %>
+    <%= link_to "Add Lists", new_list_path %>
+  </div>
+</div>
