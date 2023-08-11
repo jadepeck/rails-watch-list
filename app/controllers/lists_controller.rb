@@ -27,16 +27,6 @@ class ListsController < ApplicationController
     redirect_to lists_path, status: :see_other
   end
 
-  def update
-    @list = List.find(params[:id])
-    if @list.update(list_params)
-      redirect_to list_path(@list)
-    else
-      # give the form back again -> edit.html.erb
-      render :edit, status: :unprocessable_entity
-    end
-  end
-
   private
 
   def list_params
