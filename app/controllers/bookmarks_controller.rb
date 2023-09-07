@@ -28,3 +28,5 @@ end
     params.require(:bookmark).permit(:comment, :movie_id)
   end
 end
+
+# add some stuff for gitgub heatmap
